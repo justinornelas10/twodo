@@ -1,12 +1,10 @@
 <template>
-  <Dashboard />
+<h1>Dashboard</h1>
 </template>
 
 <script setup>
 
-import Dashboard from "@/views/Dashboard.vue";
 </script>
-
 
 <style scoped>
 
