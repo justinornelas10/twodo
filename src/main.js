@@ -4,6 +4,8 @@ import Material from '@primeuix/themes/material'
 import { createApp } from 'vue'
 import App from './App.vue'
 import 'primeicons/primeicons.css'
+import store from "@/store"
+import generateRouter from '@/router'
 
 //Components
 import Button from "primevue/button"
@@ -14,6 +16,7 @@ import IconField from "primevue/iconfield"
 import InputIcon from "primevue/inputicon"
 import Card from "primevue/card"
 import ScrollTop from 'primevue/scrolltop'
+import Avatar from 'primevue/avatar'
 
 const app = createApp(App);
 app.use(PrimeVue, {
@@ -24,6 +27,8 @@ app.use(PrimeVue, {
         }
     }
 })
+app.use(store);
+app.use(generateRouter(store));
 app.component('Button', Button);
 app.component('Badge', Badge);
 app.component('OverlayBadge', OverlayBadge);
@@ -32,5 +37,6 @@ app.component('IconField', IconField);
 app.component('InputIcon', InputIcon);
 app.component('Card', Card);
 app.component('ScrollTop', ScrollTop);
+app.component('Avatar', Avatar);
 
 app.mount('#app');
