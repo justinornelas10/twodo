@@ -17,6 +17,10 @@ import InputIcon from "primevue/inputicon"
 import Card from "primevue/card"
 import ScrollTop from 'primevue/scrolltop'
 import Avatar from 'primevue/avatar'
+import Accordion from 'primevue/accordion'
+import AccordionPanel from 'primevue/accordionpanel'
+import AccordionHeader from 'primevue/accordionheader'
+import AccordionContent from 'primevue/accordioncontent'
 
 const app = createApp(App);
 app.use(PrimeVue, {
@@ -38,5 +42,9 @@ app.component('InputIcon', InputIcon);
 app.component('Card', Card);
 app.component('ScrollTop', ScrollTop);
 app.component('Avatar', Avatar);
+app.component('Accordion', Accordion);
+app.component('AccordionPanel', AccordionPanel);
+app.component('AccordionHeader', AccordionHeader);
+app.component('AccordionContent', AccordionContent);
 
 app.mount('#app');
