@@ -1,7 +1,7 @@
 <template>
-	<nav class="fixed w-full z-40 mx-auto flex items-center justify-between p-4 lg:px-8 bg-white" aria-label="Global">
+	<nav class="fixed w-full z-40 mx-auto flex items-center justify-between p-2 lg:px-14 bg-white shadow-sm" aria-label="Global">
 		<div class="inline-flex space-x-8">
-			<a href="/" class="text-primary-500 font-semibold text-xl px-2 mt-1">
+			<a href="/" class="text-primary-500 font-semibold text-xl px-2 mt-1 items-center">
 				TwoDo
 			</a>
 			<div class="flex gap-x-4 items-center">
@@ -49,7 +49,7 @@
 				</RouterLink>
 			</div>
 		</div>
-		<div class="flex items-center">
+		<div class="flex items-center ">
 			<RouterLink :to="{name: 'bookmarks'}" class="px-3 py-2 hover:bg-primary-100 rounded-full">
 				<i class="pi pi-bookmark" style="font-size: 0.9rem" />
 			</RouterLink>
