@@ -1,5 +1,5 @@
 <template>
-	<Card class="!rounded-2xl !shadow-none p-4">
+	<Card class="card-wishlist !rounded-2xl !shadow-none p-4">
 		<template #header>
 			<div class="flex justify-between">
 				<p class="text-sm text-slate-400">13 items in your wishlist</p>

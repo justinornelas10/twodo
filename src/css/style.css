@@ -1,9 +1,12 @@
 @import "tailwindcss";
 @config "../../tailwind.config.js";
 
-.p-card .p-card-body {
-    padding: 0 !important;
+.card-wishlist {
+    .p-card .p-card-body {
+        padding: 0 !important;
+    }
 }
+
 
 
 .btn-hover {

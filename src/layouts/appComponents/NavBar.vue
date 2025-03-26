@@ -49,27 +49,61 @@
 				</RouterLink>
 			</div>
 		</div>
-		<div>
-			<button class="px-3 py-2 hover:bg-primary-100 rounded-full">
+		<div class="flex items-center">
+			<RouterLink :to="{name: 'bookmarks'}" class="px-3 py-2 hover:bg-primary-100 rounded-full">
 				<i class="pi pi-bookmark" style="font-size: 0.9rem" />
-			</button>
-			<button class="px-3 py-2 hover:bg-primary-100 rounded-full">
+			</RouterLink>
+			<RouterLink :to="{name: 'notifications'}" class="px-3 py-2 hover:bg-primary-100 rounded-full">
 				<i class="pi pi-bell" style="font-size: 0.9rem" />
-			</button>
-			<button class="px-3 py-2 hover:bg-primary-100 rounded-full space-x-1">
-				<Avatar label="JU" shape="circle" class="!bg-warning-100" />
-				<span>Julio</span>
-			</button>
+			</RouterLink>
+			<div>
+				<button class="px-3 py-2 hover:bg-primary-100 rounded-full space-x-1" @click="toggleProfileMenu">
+					<Avatar label="JU" shape="circle" class="!bg-warning-100" />
+					<span>Julio</span>
+				</button>
+				<transition
+					enter-active-class="transition ease-out duration-100"
+					enter-from-class="transform opacity-0 scale-95"
+					enter-to-class="transform opacity-100 scale-100"
+					leave-active-class="transition ease-in duration-75"
+					leave-from-class="transform opacity-100 scale-100"
+					leave-to-class="transform opacity-0 scale-95">
+					<div
+						v-if="openProfileMenu"
+						class="absolute right-5 top-12 lg:top-18 z-10 w-32 origin-top-right bg-white py-1 shadow-lg rounded-2xl border border-slate-100"
+						role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+						<div class="flex flex-col justify-start space-y-1">
+							<RouterLink :to="{name: 'profile'}" class="hover:bg-primary-100 rounded-2xl mx-2 py-1">
+								<span class="flex justify-start mx-4 text-sm">Profile</span>
+							</RouterLink>
+							<RouterLink :to="{name: 'bonds'}" class="hover:bg-primary-100 rounded-2xl mx-2 py-1">
+								<span class="flex justify-start mx-4 text-sm">Bonds</span>
+							</RouterLink>
+							<div class="hidden lg:block h-px w-full lg:bg-gray-900/10" aria-hidden="true" />
+							<button class="hover:bg-primary-100 rounded-2xl  mx-2 py-1">
+								<span class="flex justify-start mx-4 text-sm">Logout</span>
+							</button>
+						</div>
+					</div>
+				</transition>
+			</div>
 		</div>
 	</nav>
 </template>
 
 <script setup>
 import {useRoute} from "vue-router";
-import {computed} from "vue";
+import {computed, ref} from "vue";
 
 const route = useRoute();
 const currentRoute = computed(() => route.name)
+
+const openProfileMenu = ref(false);
+
+const toggleProfileMenu = () => {
+    openProfileMenu.value = !openProfileMenu.value;
+}
+
 
 </script>
 
