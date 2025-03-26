@@ -80,9 +80,9 @@
 								<span class="flex justify-start mx-4 text-sm">Bonds</span>
 							</RouterLink>
 							<div class="hidden lg:block h-px w-full lg:bg-gray-900/10" aria-hidden="true" />
-							<button class="hover:bg-primary-100 rounded-2xl  mx-2 py-1">
+							<RouterLink :to="{name: 'login'}" class="hover:bg-primary-100 rounded-2xl  mx-2 py-1">
 								<span class="flex justify-start mx-4 text-sm">Logout</span>
-							</button>
+							</RouterLink>
 						</div>
 					</div>
 				</transition>

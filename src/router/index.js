@@ -11,6 +11,8 @@ import Profile from "@/router/system/profile.js";
 import Bonds from "@/router/system/bonds.js";
 import Bookmarks from "@/router/system/bookmarks.js";
 import Notifications from "@/router/system/notifications.js";
+import Login from "@/router/auth/login.js";
+import Register from "@/router/auth/register.js";
 
 const routes = [
     ...Dashboard,
@@ -23,7 +25,9 @@ const routes = [
     ...Profile,
     ...Bonds,
     ...Bookmarks,
-    ...Notifications
+    ...Notifications,
+    ...Login,
+    ...Register
 ]
 
 export default function () {
