@@ -6,6 +6,8 @@ import App from './App.vue'
 import 'primeicons/primeicons.css'
 import store from "@/store"
 import generateRouter from '@/router'
+import {usePassThrough} from "primevue/passthrough";
+import PassThrough from "@/pass_through/index.js";
 
 //Components
 import Button from "primevue/button"
@@ -21,9 +23,20 @@ import Accordion from 'primevue/accordion'
 import AccordionPanel from 'primevue/accordionpanel'
 import AccordionHeader from 'primevue/accordionheader'
 import AccordionContent from 'primevue/accordioncontent'
+import Password from 'primevue/password'
+import Checkbox from 'primevue/checkbox'
+
+const customPass = usePassThrough(
+    PassThrough,
+    {
+        merge: true,
+        useMergeProps: true,
+    }
+)
 
 const app = createApp(App);
 app.use(PrimeVue, {
+    pt: customPass,
     theme: {
         preset: Material,
         options: {
@@ -46,5 +59,7 @@ app.component('Accordion', Accordion);
 app.component('AccordionPanel', AccordionPanel);
 app.component('AccordionHeader', AccordionHeader);
 app.component('AccordionContent', AccordionContent);
+app.component('Password', Password);
+app.component('Checkbox', Checkbox);
 
 app.mount('#app');
