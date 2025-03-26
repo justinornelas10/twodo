@@ -25,6 +25,7 @@ import AccordionHeader from 'primevue/accordionheader'
 import AccordionContent from 'primevue/accordioncontent'
 import Password from 'primevue/password'
 import Checkbox from 'primevue/checkbox'
+import Dialog from 'primevue/dialog'
 
 const customPass = usePassThrough(
     PassThrough,
@@ -61,5 +62,6 @@ app.component('AccordionHeader', AccordionHeader);
 app.component('AccordionContent', AccordionContent);
 app.component('Password', Password);
 app.component('Checkbox', Checkbox);
+app.component('Dialog', Dialog);
 
 app.mount('#app');
