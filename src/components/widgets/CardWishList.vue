@@ -1,5 +1,5 @@
 <template>
-	<Card class="!rounded-2xl p-4 !shadow-none border border-slate-300">
+	<Card class=" !rounded-2xl p-4 !shadow-none border border-slate-300">
 		<template #header>
 			<div class="flex justify-between">
 				<span class="font-semibold">{{ props.header }}</span>
