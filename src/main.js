@@ -26,6 +26,14 @@ import AccordionContent from 'primevue/accordioncontent'
 import Password from 'primevue/password'
 import Checkbox from 'primevue/checkbox'
 import Dialog from 'primevue/dialog'
+import ProgressBar from 'primevue/progressbar'
+import Stepper from 'primevue/stepper'
+import StepList from 'primevue/steplist'
+import StepPanels from 'primevue/steppanels'
+import StepItem from 'primevue/stepitem'
+import StepPanel from 'primevue/steppanel'
+import Step from 'primevue/step'
+import TextArea from 'primevue/textarea'
 
 const customPass = usePassThrough(
     PassThrough,
@@ -63,5 +71,13 @@ app.component('AccordionContent', AccordionContent);
 app.component('Password', Password);
 app.component('Checkbox', Checkbox);
 app.component('Dialog', Dialog);
+app.component('ProgressBar', ProgressBar);
+app.component('Stepper', Stepper);
+app.component('StepList', StepList);
+app.component('StepPanels', StepPanels);
+app.component('StepItem', StepItem);
+app.component('Step', Step);
+app.component('StepPanel', StepPanel);
+app.component('TextArea', TextArea);
 
 app.mount('#app');
