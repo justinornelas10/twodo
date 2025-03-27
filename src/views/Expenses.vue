@@ -4,7 +4,7 @@
 
 <script setup>
 
-import NoActiveBound from "@/components/widgets/NoActiveBound.vue";
+import NoActiveBound from "@/components/widgets/NoActiveBond.vue";
 </script>
 
 <style scoped>
