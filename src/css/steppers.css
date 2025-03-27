@@ -1,0 +1,26 @@
+.p-step-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-step-number {
+    color: black !important;
+    font-weight: normal !important;
+    background-color: #e5e7eb !important;
+    border-color: #e5e7eb !important;
+}
+
+.p-step-active .p-step-number {
+    color: white !important;
+    background-color: #B795F1 !important;
+    border-color: #B795F1 !important;
+
+}
+
+.p-step-header .p-step-title {
+    @apply text-xs font-normal;
+}
+
+.p-stepper-separator {
+    background-color: #B795F1 !important;
+}

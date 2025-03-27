@@ -130,7 +130,7 @@
 </template>
 
 <script setup>
-import CardWishList from "@/components/widgets/CardWishList.vue";
+import CardWishList from "@/components/widgets/Cards/CardWishList.vue";
 </script>
 
 
