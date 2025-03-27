@@ -15,9 +15,11 @@
 					<button class="mr-3 bg-white">
 						<span class="text-twodo-purple font-medium">{currentBond.name}</span>
 					</button>
-					<Button severity="secondary" class="!bg-white !rounded-2xl !text-sm !font-bold hover:!bg-primary-100">
-						Vincular a tu pareja
-					</Button>
+					<RouterLink :to="{name: 'bonds'}">
+						<Button severity="secondary" class="!bg-white !rounded-2xl !text-sm !font-bold hover:!bg-primary-100">
+							Vincular a tu pareja
+						</Button>
+					</RouterLink>
 					<div class="relative">
 						<button class="px-3 py-2 bg-white rounded-full hover:!bg-primary-100">
 							<OverlayBadge value="2" severity="danger" size="small">
