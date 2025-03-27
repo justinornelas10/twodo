@@ -36,6 +36,7 @@ import Step from 'primevue/step'
 import TextArea from 'primevue/textarea'
 import Drawer from 'primevue/drawer'
 import Paginator from 'primevue/paginator'
+import Select from 'primevue/select'
 
 const customPass = usePassThrough(
     PassThrough,
@@ -83,5 +84,6 @@ app.component('StepPanel', StepPanel);
 app.component('TextArea', TextArea);
 app.component('Drawer', Drawer);
 app.component('Paginator', Paginator);
+app.component('Select', Select);
 
 app.mount('#app');

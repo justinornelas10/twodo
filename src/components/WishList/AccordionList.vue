@@ -4,7 +4,7 @@
 			<div class="flex justify-between">
 				<p class="text-sm text-slate-400">13 items in your wishlist</p>
 				<div class="flex space-x-4">
-					<a class="text-primary-500 font-semibold text-sm inline-flex space-x-2 items-center">
+					<button class="text-primary-500 font-semibold text-sm inline-flex space-x-2 items-center" @click="randomModal.beforeOpen()">
 						<svg
 							class="h5 w-5" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="shuffleIconTitle" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"
 							fill="none" color="#8D6CCF">
@@ -13,12 +13,12 @@
 							<path d="M19 13L22 16L19 19" /> 
 						</svg>
 						<span>Random suggestion</span>
-					</a>
-					<a class="text-primary-500 font-semibold text-sm inline-flex space-x-2 items-center">
+					</button>
+					<RouterLink :to="{name: 'dashboard'}" class="text-primary-500 font-semibold text-sm inline-flex space-x-2 items-center">
 						<i class="pi pi-calendar" />
 						<span>Calendar view</span>
 						<i class="pi pi-angle-right" />
-					</a>
+					</RouterLink>
 				</div>
 			</div>
 			<div class="hidden lg:block h-px w-full lg:bg-gray-900/10 mt-4" aria-hidden="true" />
@@ -127,10 +127,15 @@
 			</div>
 		</template>
 	</Card>
+	<RandomSuggestionModal ref="randomModal" />
 </template>
 
 <script setup>
 import CardWishList from "@/components/widgets/Cards/CardWishList.vue";
+import RandomSuggestionModal from "@/components/WishList/RandomSuggestionModal.vue";
+import {ref} from "vue";
+
+const randomModal = ref(null);
 </script>
 
 

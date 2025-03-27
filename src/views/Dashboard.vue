@@ -21,11 +21,13 @@
 						</Button>
 					</RouterLink>
 					<div class="relative">
-						<button class="px-3 py-2 bg-white rounded-full hover:!bg-primary-100">
-							<OverlayBadge value="2" severity="danger" size="small">
-								<i class="pi pi-bell" />
-							</OverlayBadge>
-						</button>
+						<RouterLink :to="{name: 'notifications'}">
+							<button class="px-3 py-2 bg-white rounded-full hover:!bg-primary-100">
+								<OverlayBadge value="2" severity="danger" size="small">
+									<i class="pi pi-bell" />
+								</OverlayBadge>
+							</button>
+						</RouterLink>
 					</div>
 				</div>
 			</div>
