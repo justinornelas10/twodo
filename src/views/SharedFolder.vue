@@ -1,9 +1,10 @@
 <template>
-	<h1>Shared folder</h1>
+	<NoActiveBound />
 </template>
 
 <script setup>
 
+import NoActiveBound from "@/components/widgets/NoActiveBound.vue";
 </script>
 
 <style scoped>
