@@ -34,6 +34,7 @@ import StepItem from 'primevue/stepitem'
 import StepPanel from 'primevue/steppanel'
 import Step from 'primevue/step'
 import TextArea from 'primevue/textarea'
+import Drawer from 'primevue/drawer'
 
 const customPass = usePassThrough(
     PassThrough,
@@ -79,5 +80,6 @@ app.component('StepItem', StepItem);
 app.component('Step', Step);
 app.component('StepPanel', StepPanel);
 app.component('TextArea', TextArea);
+app.component('Drawer', Drawer);
 
 app.mount('#app');
