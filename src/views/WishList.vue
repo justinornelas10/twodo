@@ -11,10 +11,12 @@
 				<div class="flex items-center space-x-4">
 					<Button
 						label="Add Category" icon="pi pi-folder" size="small"
-						class="btn-hover !bg-white !text-black !px-5 !border-none !rounded-2xl hover:!bg-primary-100" />
+						class="btn-hover !bg-slate-50 !text-black !px-5 !border-slate-200 !rounded-2xl hover:!bg-primary-100"
+						@click="categoryModal.beforeOpen()" />
 					<Button
 						label="Add Idea" icon="pi pi-plus" size="small"
-						class="btn-hover !bg-primary-500 !px-5 text-white !border-none !rounded-2xl" />
+						class="btn-hover !bg-primary-500 !px-5 text-white !border-none !rounded-2xl"
+						@click="ideaModal.beforeOpen()" />
 				</div>
 			</div>
 			<div class="pt-4">
@@ -22,11 +24,18 @@
 			</div>
 		</div>
 	</div>
+	<AddCategoryModal ref="categoryModal" />
+	<AddIdeaModal ref="ideaModal" />
 </template>
 
 <script setup>
-
+import {ref} from "vue";
 import AccordionList from "@/components/WishList/AccordionList.vue";
+import AddCategoryModal from "@/components/WishList/AddCategoryModal.vue";
+import AddIdeaModal from "@/components/WishList/AddIdeaModal.vue";
+
+const categoryModal = ref(null);
+const ideaModal = ref(null);
 </script>
 
 <style scoped>
