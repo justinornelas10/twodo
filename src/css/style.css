@@ -9,14 +9,6 @@
     }
 }
 
-#pv_id_3  {
-    @apply bg-[#fafcff] border-none w-full border-slate-200 rounded-full focus:outline-primary-500 text-slate-700 px-4 text-base
-}
-
-#pv_id_4, #pv_id_7 {
-    @apply bg-white border-none w-full border-slate-200 rounded-full focus:outline-primary-500 text-slate-700 px-4 text-base
-}
-
 .p-checkbox-checked .p-checkbox-box {
     border-color: #B795F1 !important;
     background-color: #B795F1 !important;
