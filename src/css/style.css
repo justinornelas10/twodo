@@ -34,3 +34,8 @@
     @apply text-white;
     background-color: #B795F1 !important;
 }
+
+.p-step .p-stepper-number {
+    display: none;
+}
+
