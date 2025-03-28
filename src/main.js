@@ -37,11 +37,14 @@ import TextArea from 'primevue/textarea'
 import Drawer from 'primevue/drawer'
 import Paginator from 'primevue/paginator'
 import Select from 'primevue/select'
+import DatePicker from 'primevue/datepicker'
+import ToggleSwitch from 'primevue/toggleswitch'
 
 const customPass = usePassThrough(
     PassThrough,
     {
         merge: true,
+        mergeProps: true,
         useMergeProps: true,
     }
 )
@@ -85,5 +88,7 @@ app.component('TextArea', TextArea);
 app.component('Drawer', Drawer);
 app.component('Paginator', Paginator);
 app.component('Select', Select);
+app.component('DatePicker', DatePicker);
+app.component('ToggleSwitch', ToggleSwitch);
 
 app.mount('#app');
