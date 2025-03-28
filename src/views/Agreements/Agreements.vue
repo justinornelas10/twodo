@@ -10,6 +10,7 @@
 				</div>
 				<Avatar label="JU" shape="circle" size="large" class="!bg-warning-100" />
 			</div>
+			<WelcomeAgreementStepper />
 			<SearchAgreements />
 			<AgreementsProgress />
 			<MyAgreements />
@@ -20,12 +21,18 @@
 </template>
 
 <script setup>
+import {onMounted, ref} from "vue";
 
 import SearchAgreements from "@/components/Agreements/SearchAgreements.vue";
 import AgreementsProgress from "@/components/Agreements/AgreementsProgress.vue";
 import MyAgreements from "@/components/Agreements/MyAgreements.vue";
 import RecommendedCategories from "@/components/Agreements/RecommendedCategories.vue";
 import CategoryExplorer from "@/components/Agreements/CategoryExplorer.vue";
+import WelcomeAgreementStepper from "@/components/Agreements/WelcomeAgreementStepper.vue";
+
+
+
+
 </script>
 
 <style scoped>
