@@ -41,7 +41,7 @@
 			<div class="hidden lg:block h-px w-full lg:bg-gray-900/10 mt-4" aria-hidden="true" />
 		</template>
 		<template #footer>
-			<div class="flex justify-start bg-slate-100 hover:bg-primary-100 px-3 py-1 rounded-xl">
+			<div class="flex justify-start bg-slate-100 hover:bg-primary-100 px-3 py-1 rounded-xl" @click="scheduleModal.beforeOpen()">
 				<button class="w-full flex justify-between mx-1 items-center">
 					<span class="flex items-center space-x-2">
 						<i class="pi pi-calendar" />
@@ -52,9 +52,12 @@
 			</div>
 		</template>
 	</Card>
+	<ScheduleVisitModal ref="scheduleModal" :title="props.header" />
 </template>
 
 <script setup>
+import ScheduleVisitModal from "@/components/WishList/ScheduleVisitModal.vue";
+import {ref} from "vue";
 
 const props = defineProps({
     header: {type: String, default: ''},
@@ -63,6 +66,7 @@ const props = defineProps({
     cuisine: {type: String, default: ''}
 })
 
+const scheduleModal = ref(null);
 
 </script>
 
