@@ -17,10 +17,18 @@
 
 }
 
+.p-step-active .p-step-title {
+    color: #B795F1 !important;
+}
+
 .p-step-header .p-step-title {
     @apply text-xs font-normal;
 }
 
 .p-stepper-separator {
+    background-color: #e5e7eb !important;
+}
+
+.p-step-active .p-stepper-separator {
     background-color: #B795F1 !important;
 }
