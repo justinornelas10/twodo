@@ -23,7 +23,7 @@
 			</div>
 			<div class="hidden lg:block h-px w-full lg:bg-gray-900/10 mt-4" aria-hidden="true" />
 			<div>
-				<Accordion>
+				<Accordion value="0">
 					<AccordionPanel value="0" class="!shadow-none">
 						<AccordionHeader>
 							<p class="text-lg">Restaurantes</p>

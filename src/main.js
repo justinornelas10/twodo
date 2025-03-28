@@ -1,6 +1,6 @@
 import './css/style.css'
 import PrimeVue from 'primevue/config'
-import Material from '@primeuix/themes/material'
+import Aura from '@primeuix/themes/aura'
 import { createApp } from 'vue'
 import App from './App.vue'
 import 'primeicons/primeicons.css'
@@ -53,7 +53,7 @@ const app = createApp(App);
 app.use(PrimeVue, {
     pt: customPass,
     theme: {
-        preset: Material,
+        preset: Aura,
         options: {
             darkModeSelector: false,
         }
